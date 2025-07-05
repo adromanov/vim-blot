@@ -2,6 +2,8 @@
 
 A Vim plugin that integrates the [Blot](https://github.com/joaotavora/blot) assembly viewer with Vim for C++ development.
 
+![vim-blot demo](https://github.com/user-attachments/assets/99385ea4-32b7-437a-84ab-4eb9eb1a4836)
+
 ## Features
 
 - Display assembly output in a split window alongside your C++ source
