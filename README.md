@@ -1,6 +1,6 @@
 # Blot Vim Plugin
 
-A Vim plugin that integrates the [Blot](https://github.com/joaotavora/blot) assembly viewer with Vim for C++ development.
+A Vim plugin that integrates [Blot](https://github.com/joaotavora/blot), a compiler-explorer clone that works with your local toolchain and project, with Vim for C++ development.
 
 ![vim-blot demo](https://github.com/user-attachments/assets/99385ea4-32b7-437a-84ab-4eb9eb1a4836)
 
@@ -18,22 +18,23 @@ A Vim plugin that integrates the [Blot](https://github.com/joaotavora/blot) asse
 Add to your `.vimrc`:
 
 ```vim
-Plug '/path/to/blot/vim'
+Plug 'adromanov/vim-blot'
 ```
 
 ### Manual Installation
 
-Copy the `vim/` directory contents to your Vim configuration directory:
+Copy the plugin files to your Vim configuration directory:
 
 ```bash
-cp -r vim/* ~/.vim/
+cp -r ftplugin/ ~/.vim/ftplugin/
+cp -r plugin/ ~/.vim/plugin/
 ```
 
 ### Using Pathogen
 
 ```bash
 cd ~/.vim/bundle
-ln -s /path/to/blot/vim blot
+git clone https://github.com/adromanov/vim-blot
 ```
 
 ## Usage
@@ -57,9 +58,6 @@ ln -s /path/to/blot/vim blot
 ```vim
 " Set custom blot executable path (default: 'blot')
 let g:blot_executable = '/path/to/blot'
-
-" Set build directory for local blot executable (default: 'build-Debug')
-let g:blot_build_dir = 'build-Release'
 
 " Disable default key mappings
 let g:blot_no_mappings = 1

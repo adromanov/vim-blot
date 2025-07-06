@@ -11,18 +11,9 @@ if !exists('g:blot_executable')
     let g:blot_executable = 'blot'
 endif
 
-if !exists('g:blot_build_dir')
-    let g:blot_build_dir = 'build-Debug'
-endif
 
 " Function to find blot executable
 function! s:FindBlotExecutable()
-    " Try local build directory first
-    let local_blot = g:blot_build_dir . '/blot'
-    if executable(local_blot)
-        return local_blot
-    endif
-
     " Try global executable
     if executable(g:blot_executable)
         return g:blot_executable
